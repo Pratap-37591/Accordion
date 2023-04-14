@@ -1,49 +1,29 @@
 import React, { useState } from "react";
 import "./App.css";
-// import Accordion from "./Components/Accordion";
-// import Dropdown from "./Dropdown";
-// import CustomMenuBar from "./CustomMenuBar";
-import Translate from "./Translate";
+import Accordion from "./Components/Accordion";
 
-// const items = [
-//   {
-//     title: "What is React?",
-//     content: "Prakasj told me React is a frontend javascript framework",
-//   },
-//   {
-//     title: "Why is React?",
-//     content: "React is a favorite JS library among students at UPSHOT",
-//   },
-//   {
-//     title: "hOW do you use React?",
-//     content: "any one can use React by creating components",
-//   },
-// ];
 
-const options = [
+const items = [
   {
-    label: "The Color Red",
-    value: "red",
+    title: "What is React?",
+    content: "Prakasj told me React is a frontend javascript framework",
   },
   {
-    label: "The Color Green",
-    value: "green",
+    title: "Why is React?",
+    content: "React is a favorite JS library among students at UPSHOT",
   },
   {
-    label: "The Color Blue",
-    value: "blue",
+    title: "hOW do you use React?",
+    content: "any one can use React by creating components",
   },
 ];
+
+
 const App = () => {
   const [selected, setSelected] = useState(options[0]);
   return (
     <>
-      <br />
-      {/* <Dropdown selected={selected} onSelectedChange={setSelected}  options={options}/> */}
-
-      {/* <CustomMenuBar/> */}
-
-      <Translate />
+    <Accordion items={items}/>
     </>
   );
 };
